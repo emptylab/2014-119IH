@@ -1,0 +1,28 @@
+﻿body {
+    padding-top: 20px;
+}
+
+.container > header img {
+    display: inline;
+}
+
+.container > header h1 {
+    padding-top: 20px;
+    font-size: 50px;
+}
+
+.container > header h2 {
+    padding-bottom: 20px;
+    border-bottom: 1px solid silver;
+}
+
+.affix {
+    margin-top: 40px;
+}
+
+@media(max-width:800px) {
+    .affix, .affix-top, .affix-bottom {
+        position: static;
+        display: none;
+    }
+}
