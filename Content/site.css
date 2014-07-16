@@ -16,19 +16,25 @@
     border-bottom: 1px solid silver;
 }
 
-footer {
-    
+footer {    
     padding-bottom:200px;
-
 }
 
 .affix {
     margin-top: 40px;
 }
 
-@media(max-width:800px) {
+/*col-md collapse width*/
+@media(max-width:992px) {
     .affix, .affix-top, .affix-bottom {
         position: static;
         display: none;
     }
 }
+
+/*ie*/
+@-webkit-viewport   { width: device-width; }
+@-moz-viewport      { width: device-width; }
+@-ms-viewport       { width: device-width; }
+@-o-viewport        { width: device-width; }
+@viewport           { width: device-width; }
