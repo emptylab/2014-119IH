@@ -1,10 +1,23 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+
+    @{
+        dynamic Config = new System.Dynamic.ExpandoObject { };
+        Config.First = "Ingrid";
+        Config.Last = "Hauss";
+        Config.Email = "ingridhauss@yahoo.com";
+        Config.Phone = "+1-604-720-1460";
+        Config.TagLine = "Yoga & Art";
+        //
+        Config.FullName = Config.First + " " + Config.Last;
+
+    }
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ingrid Hauss | Yoga &amp; Art</title>
+    <title>@Config.FullName | @Config.TagLine</title>
     <link href="Content/bootstrap.css" rel="stylesheet" />
     <link href="Content/site.css" rel="stylesheet" />
     <!-- Bootstrap -->
@@ -17,14 +30,17 @@
 </head>
 <body>
 
+
+
     <div class="container">
+
         <header class="row">
             <div class="col-md-4">
                 <img class="img-responsive" src="images/xs/Energetic-Warrior-2.jpg" />
             </div>
             <div class="col-md-8">
-                <h1>Ingrid Hauss</h1>
-                <h2>Yoga &amp; Art</h2>
+                <h1>@Config.FullName</h1>
+                <h2>@Config.TagLine</h2>
             </div>
         </header>
 
@@ -33,8 +49,8 @@
             <div class="col-md-4">
 
                 <ul class="nav nav-pills nav-stacked affix" role="tablist">
-                    <li><a>604-720-1460</a></li>
-                    <li><a>ingridhauss@yahoo.com</a></li>
+                    <li><a href="tel:@Config.Phone">@Config.Phone</a></li>
+                    <li><a href="mailto:@Config.Email">@Config.Email</a></li>
                     <li><a href="#bookings">Booking</a></li>
                     <li><a href="#classes">Classes</a></li>
                     <li><a href="#retreats">Retreats</a></li>
@@ -49,14 +65,14 @@
                     </div>
                     <div class="row">
                         <div class="col-md-6">
-                            <dl>
-                                <dt>Book private Indoor or Outdoor Session</dt>
-                                <dd>Pilates, Yoga, and Restorative</dd>
-                                <dd>Contact Ingrid at 604-720-1460</dd>
-                                <dd>$90 per hour.</dd>
-                                <dd></dd>
-                                <dd></dd>
-                            </dl>
+
+                            <h4>Private Indoor or Outdoor Sessions</h4>
+                            <ul class="list-unstyled">
+                                <li>Pilates, Yoga, and Restorative</li>
+                                <li>Contact @Config.First at @Config.Phone</li>
+                                <li>$90 per hour.</li>
+                            </ul>
+
                         </div>
                         <div class="col-md-6">
                             <img class="img-responsive img-rounded img-thumbnail" src="images/xs/urban-yoga.jpg" />
@@ -64,21 +80,25 @@
                     </div>
                 </section>
 
-
                 <section>
                     <div class="page-header">
                         <h1 id="classes">Classes</h1>
                     </div>
                     <div class="row">
                         <div class="col-md-6">
+                            <h4><a href="http://opendooryoga.bc.ca/">Open Door Yoga</a> <small>Kerrisdale</small></h4>
                             <dl>
-                                <dt><a href="http://opendooryoga.bc.ca/">Open Door Yoga</a> (Kerrisdale)</dt>
-                                <dd>Fridays 4 PM YIN</dd>
-                                <dd>Saturdays 8:30 AM HATHA</dd>
+                                <dt>Fridays</dt>
+                                <dd>4 PM YIN</dd>
+                                <dt>Saturdays</dt>
+                                <dd>8:30 AM HATHA</dd>
                                 <dd>10:15 AM HATHA</dd>
-                                <dd>4:15 HATHA</dd>
-                                <dt><a href="http://www.semperviva.com/">Semperviva Yoga</a> (Sun Centre)</dt>
-                                <dd>Sundays 7 PM HATHA</dd>
+                                <dd>4:15 PM HATHA</dd>
+                            </dl>
+                            <h4><a href="http://www.semperviva.com/">Semperviva Yoga</a> <small>Sun Centre</small></h4>
+                            <dl>
+                                <dt>Sundays</dt>
+                                <dd>7 PM HATHA</dd>
                             </dl>
                         </div>
                         <div class="col-md-6">
@@ -95,13 +115,15 @@
 
                     <div class="row">
                         <div class="col-md-6">
-                            <dl>
-                                <dt>Yoga In-Fusion &trade; on Salt Spring Island</dt>
-                                <dd>August 22-24, 2014</dd>
-                                <dd>$115, $50 deposit to reserve</dd>
-                                <dd>Contact Ingrid to book.</dd>
-                                <dd>With musician Willy Miles-Grenzberg and Ingrid Hauss</dd>
-                            </dl>
+
+                            <h4>Yoga In-Fusion &trade; on Salt Spring Island</h4>
+                            <ul class="list-unstyled">
+                                <li>August 22-24, 2014</li>
+                                <li>$115 ($50 deposit to reserve)</li>
+                                <li>Contact Ingrid to book.</li>
+                                <li>With musician Willy Miles-Grenzberg and Ingrid Hauss</li>
+                            </ul>
+
                         </div>
                         <div class="col-md-6">
                             <img class="img-responsive" src="images/xs/island-reverie.jpg" />
@@ -157,13 +179,59 @@
                             </a>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-xs-6 col-md-3">
+                            <a href="#" class="thumbnail">
+                                <img data-src="holder.js/100%x180" alt="...">
+                            </a>
+                        </div><div class="col-xs-6 col-md-3">
+                            <a href="#" class="thumbnail">
+                                <img data-src="holder.js/100%x180" alt="...">
+                            </a>
+                        </div>
+                        <div class="col-xs-6 col-md-3">
+                            <a href="#" class="thumbnail">
+                                <img data-src="holder.js/100%x180" alt="...">
+                            </a>
+                        </div>
+                        <div class="col-xs-6 col-md-3">
+                            <a href="#" class="thumbnail">
+                                <img data-src="holder.js/100%x180" alt="...">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6 col-md-3">
+                            <a href="#" class="thumbnail">
+                                <img data-src="holder.js/100%x180" alt="...">
+                            </a>
+                        </div><div class="col-xs-6 col-md-3">
+                            <a href="#" class="thumbnail">
+                                <img data-src="holder.js/100%x180" alt="...">
+                            </a>
+                        </div>
+                        <div class="col-xs-6 col-md-3">
+                            <a href="#" class="thumbnail">
+                                <img data-src="holder.js/100%x180" alt="...">
+                            </a>
+                        </div>
+                        <div class="col-xs-6 col-md-3">
+                            <a href="#" class="thumbnail">
+                                <img data-src="holder.js/100%x180" alt="...">
+                            </a>
+                        </div>
+                    </div>
                 </section>
+
             </div>
         </div>
 
         <footer class="footer">
-            <span>&copy; Copyright 2014 Ingrin Hauss</span> |
-            <a>ingridhauss@yahoo.com</a>
+            <div class="pull-right">
+                <span>&copy; Copyright 2014 @Config.FullName</span> |
+                <a href="mailto:@Config.Email">@Config.Email</a> |
+                <span>Website by </span><a href="http://www.bigfont.ca">BigFont</a>
+            </div>
         </footer>
 
     </div>
@@ -175,4 +243,5 @@
     <script src="Scripts/bootstrap.js"></script>
     <script src="Scripts/holder.js"></script>
 </body>
+
 </html>

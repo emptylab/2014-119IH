@@ -16,6 +16,12 @@
     border-bottom: 1px solid silver;
 }
 
+footer {
+    
+    padding-bottom:200px;
+
+}
+
 .affix {
     margin-top: 40px;
 }
