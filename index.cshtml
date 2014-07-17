@@ -277,6 +277,19 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script async src="Scripts/bootstrap.min.js"></script>
     <script async src="Scripts/holder.min.js"></script>
+
+    @*IE 10*@
+    <script type="text/javascript">
+        if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+            var msViewportStyle = document.createElement('style')
+            msViewportStyle.appendChild(
+              document.createTextNode(
+                '@-ms-viewport{width:auto!important}'
+              )
+            )
+            document.querySelector('head').appendChild(msViewportStyle)
+        }
+    </script>
 </body>
 
 </html>
