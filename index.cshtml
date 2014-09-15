@@ -3,24 +3,26 @@
 <head>
 
     @{
-        dynamic Config = new System.Dynamic.ExpandoObject { };
-        Config.First = "Ingrid";
-        Config.Last = "Hauss";
-        Config.Email = "ingridhauss@yahoo.com";
-        Config.Phone = "+1-604-720-1460";
-        Config.TagLine = "Yoga & Art";
-        //
-        Config.FullName = Config.First + " " + Config.Last;
+        // refactor this into an anonymous object
+        //dynamic Config = new System.Dynamic.ExpandoObject { };
 
+        var Config = new
+        {
+            FirstName = "Ingrid",
+            LastName = "Hauss",
+            Email = "ingridhauss@yahoo.com",
+            Phone = "+1-604-720-1460",
+            TagLine = "Yoga & Art"
+        };
     }
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="@Config.FullName @Config.TagLine official site for bookings, classes, retreats, and art gallery." />
+    <meta name="description" content="@Config.FirstName @Config.LastName @Config.TagLine official site for bookings, classes, retreats, and art gallery." />
     <meta name="keywords" content="yoga, art, retreats, hatha, yin" />
 
-    <title>@Config.FullName | @Config.TagLine</title>
+    <title>@Config.FirstName @Config.LastName | @Config.TagLine</title>
 
     <link href="@Fingerprint.Tag("/Content/favicon.ico")" rel="shortcut icon" />
     <link href="@Fingerprint.Tag("/Content/bootstrap-and-site.min.css")" rel="stylesheet" />
@@ -43,7 +45,7 @@
                 <img alt="A black and white zen drawing of a stick figure person surrounded by a fire." class="img-responsive" src="images/energetic-warrior-xs.jpg" />
             </div>
             <div class="col-md-8">
-                <h1>@Config.FullName</h1>
+                <h1>@Config.FirstName @Config.LastName</h1>
                 <h2>@Config.TagLine</h2>
             </div>
         </header>
@@ -79,7 +81,7 @@
                             <h4>Private Indoor or Outdoor Sessions</h4>
                             <ul class="list-unstyled">
                                 <li>Pilates, Yoga, and Restorative</li>
-                                <li>Contact @Config.First at @Config.Phone</li>
+                                <li>Contact @Config.FirstName at @Config.Phone</li>
                                 <li>$90 per hour.</li>
                             </ul>
 
@@ -185,7 +187,7 @@
                             <img class="img-responsive img-thumbnail" src="/images/about-me-log-10x10-xs.jpg" alt="This is a placeholder image.">
                         </div>
                         <div class="col-sm-6">
-                            <h4>@Config.FullName</h4>
+                            <h4>@Config.FirstName + @Config.LastName</h4>
                             <p>
                                 Ingrid is a certified yoga and pilates teacher, artist and spiritual director who teaches yoga, meditation and body prayer. She offers workshops, retreats and art-installations in yoga, art and contemplative spirituality in the United States, Europe and Canada.
                             </p>
@@ -196,100 +198,53 @@
 
                 <section>
                     <div class="page-header">
-                        <h1 id="art">Art <small>Coming Soon</small></h1>
+                        <h1 id="art">Art</h1>
                     </div>
-                    <div class="row">
-                        <div class="col-xs-6 col-md-3">
-                            <a href="#" class="thumbnail">
-                                <img data-src="holder.js/100%x180" alt="This is a placeholder image.">
-                            </a>
-                        </div>
-                        <div class="col-xs-6 col-md-3">
-                            <a href="#" class="thumbnail">
-                                <img data-src="holder.js/100%x180" alt="This is a placeholder image.">
-                            </a>
-                        </div>
-                        <div class="col-xs-6 col-md-3">
-                            <a href="#" class="thumbnail">
-                                <img data-src="holder.js/100%x180" alt="This is a placeholder image.">
-                            </a>
-                        </div><div class="col-xs-6 col-md-3">
-                            <a href="#" class="thumbnail">
-                                <img data-src="holder.js/100%x180" alt="This is a placeholder image.">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-6 col-md-3">
-                            <a href="#" class="thumbnail">
-                                <img data-src="holder.js/100%x180" alt="This is a placeholder image.">
-                            </a>
-                        </div><div class="col-xs-6 col-md-3">
-                            <a href="#" class="thumbnail">
-                                <img data-src="holder.js/100%x180" alt="This is a placeholder image.">
-                            </a>
-                        </div>
-                        <div class="col-xs-6 col-md-3">
-                            <a href="#" class="thumbnail">
-                                <img data-src="holder.js/100%x180" alt="This is a placeholder image.">
-                            </a>
-                        </div>
-                        <div class="col-xs-6 col-md-3">
-                            <a href="#" class="thumbnail">
-                                <img data-src="holder.js/100%x180" alt="This is a placeholder image.">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-6 col-md-3">
-                            <a href="#" class="thumbnail">
-                                <img data-src="holder.js/100%x180" alt="This is a placeholder image.">
-                            </a>
-                        </div><div class="col-xs-6 col-md-3">
-                            <a href="#" class="thumbnail">
-                                <img data-src="holder.js/100%x180" alt="This is a placeholder image.">
-                            </a>
-                        </div>
-                        <div class="col-xs-6 col-md-3">
-                            <a href="#" class="thumbnail">
-                                <img data-src="holder.js/100%x180" alt="This is a placeholder image.">
-                            </a>
-                        </div>
-                        <div class="col-xs-6 col-md-3">
-                            <a href="#" class="thumbnail">
-                                <img data-src="holder.js/100%x180" alt="This is a placeholder image.">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-6 col-md-3">
-                            <a href="#" class="thumbnail">
-                                <img data-src="holder.js/100%x180" alt="This is a placeholder image.">
-                            </a>
-                        </div><div class="col-xs-6 col-md-3">
-                            <a href="#" class="thumbnail">
-                                <img data-src="holder.js/100%x180" alt="This is a placeholder image.">
-                            </a>
-                        </div>
-                        <div class="col-xs-6 col-md-3">
-                            <a href="#" class="thumbnail">
-                                <img data-src="holder.js/100%x180" alt="This is a placeholder image.">
-                            </a>
-                        </div>
-                        <div class="col-xs-6 col-md-3">
-                            <a href="#" class="thumbnail">
-                                <img data-src="holder.js/100%x180" alt="This is a placeholder image.">
-                            </a>
-                        </div>
-                    </div>
-                </section>
 
+                    @{
+                        <style type="text/css">
+                            div.img-gallery figure {
+                                height: 250px;
+                            }
+
+                            div.img-gallery img {
+                                height: 156px;
+                                padding-bottom: 20px;
+                            }
+                        </style>
+
+                        var siteDir = Server.MapPath("~/");
+                        var imagesDir = Server.MapPath("~/images/gallery");
+                        var fileInfos = Directory.GetFiles(imagesDir, "*.jpg").Select(s => new FileInfo(s));
+
+                        <div class="img-gallery">
+                            <div class="row">
+                                @foreach (var fileInfo in fileInfos)
+                                {
+                                    var imgSrc = fileInfo.FullName.Replace(siteDir, string.Empty).Replace("\\", "/");
+                                    var imgCaption = fileInfo.Name.Substring(0, fileInfo.Name.Length - fileInfo.Extension.Length);
+                                    <div class="col-xs-6 col-md-4">
+                                        <a href="@imgSrc">
+                                            <figure>
+                                                <img class="img-responsive" src="@imgSrc" />
+                                                <figcaption>
+                                                    @imgCaption
+                                                </figcaption>
+                                            </figure>
+                                        </a>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    }
+
+                </section>
             </div>
         </div>
 
         <footer class="footer">
             <div class="pull-right">
-                <span>&copy; Copyright 2014 @Config.FullName</span> |
+                <span>&copy; Copyright 2014 @Config.FirstName @Config.LastName</span> |
                 <a href="mailto:@Config.Email">@Config.Email</a> |
                 <span>Website by </span><a href="http://www.bigfont.ca">BigFont</a>
             </div>
