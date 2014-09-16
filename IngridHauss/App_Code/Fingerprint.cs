@@ -22,3 +22,4 @@ public class Fingerprint
         return HttpRuntime.Cache[rootRelativePath] as string;
     }
 }
+
