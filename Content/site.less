@@ -1,0 +1,100 @@
+﻿@import 'bootstrap.css';
+
+body {
+    padding-top: 20px;
+}
+
+.container {
+    > header {
+        img {
+            display: inline;
+        }
+
+        h1 {
+            padding-top: 20px;
+            font-size: 50px;
+        }
+
+        .container > header h2 {
+            padding-bottom: 20px;
+            border-bottom: 1px solid silver;
+        }
+    }
+}
+
+
+div.img-gallery {
+
+    @caption-height: 40px;
+    @img-height: 140px;
+    @margin-small:7px;
+
+    figure {
+        display:inline-block;
+        margin-bottom:40px;
+        position: relative;
+        
+        &.sold {
+
+            &::after {
+                bottom: @caption-height;
+                content: 'Sold';
+                margin-bottom: @margin-small;
+                margin-right: @margin-small;
+                position: absolute;
+                right:0;
+            }
+        }
+
+        a {
+            display: inline-block;
+        }
+
+        img {
+            height: @img-height;
+        }
+
+        figcaption {
+            height: @caption-height;
+        }
+    }
+}
+
+
+
+footer {
+    padding-bottom: 200px;
+}
+
+.affix {
+    margin-top: 40px;
+}
+/*col-md collapse width*/
+@media(max-width:992px) {
+    .affix, .affix-top, .affix-bottom {
+        position: static;
+        display: none;
+    }
+}
+/*ie*/
+@-webkit-viewport {
+    width: device-width;
+}
+
+@-moz-viewport {
+    width: device-width;
+}
+
+@-ms-viewport {
+    width: device-width;
+}
+
+@-o-viewport {
+    width: device-width;
+}
+
+@viewport
+
+{
+    width: device-width;
+}
