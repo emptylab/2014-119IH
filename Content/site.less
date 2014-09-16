@@ -1,6 +1,7 @@
 ﻿@import 'bootstrap.css';
 
 body {
+    position: relative;
     padding-top: 20px;
 }
 
@@ -66,36 +67,22 @@ footer {
     padding-bottom: 200px;
 }
 
-.affix {
-    margin-top: 40px;
-}
-
-/*col-md collapse width*/
-@media(max-width:992px) {
-    .affix, .affix-top, .affix-bottom {
-        position: static;
-        display: none;
+#site-nav {
+    .affix-top,
+    .affix,
+    .affix-bottom {
+        padding-top: 40px;
+        display:table;
     }
-}
-/*ie*/
-@-webkit-viewport {
-    width: device-width;
-}
 
-@-moz-viewport {
-    width: device-width;
-}
-
-@-ms-viewport {
-    width: device-width;
-}
-
-@-o-viewport {
-    width: device-width;
-}
-
-@viewport
-
-{
-    width: device-width;
+    .affix {
+        top: 0;
+    }
+    /*col-md collapse width*/
+    @media(max-width:992px) {
+        .affix, .affix-top, .affix-bottom {
+            position: static;
+            display: none;
+        }
+    }
 }
