@@ -225,30 +225,23 @@
                     </div>
 
                     @{
-                        var siteDir = Server.MapPath("~/");
-                        var imagesDir = Server.MapPath("~/images/gallery");
-                        var fileInfos = Directory.GetFiles(imagesDir, "*.jpg").Select(s => new FileInfo(s));
 
                         <div class="img-gallery">
                             <div class="row">
-                                @foreach (var fileInfo in fileInfos)
+                                @foreach (var fileInfo in ImageGallery.GetGalleryImages())
                                 {
-                                    // the file name pattern must be <title string> <dimension string> cm [SOLD]
-                                    var imgSrc = fileInfo.FullName.Replace(siteDir, string.Empty).Replace("\\", "/");
-                                    var fileName = fileInfo.Name.Substring(0, fileInfo.Name.Length - fileInfo.Extension.Length);
-                                    // get the title
-                                    var titleEndIndex = fileName.IndexOfAny("0123456789".ToCharArray());
-                                    var imgTitle = fileName.Substring(0, titleEndIndex);
-                                    // get the dimensions
-                                    var dimensionsEndIndex = fileName.LastIndexOf("cm") + 2;
-                                    var imgDimensions = fileName.Substring(titleEndIndex, dimensionsEndIndex - titleEndIndex);
-                                    // check whether sold
-                                    var isSold = fileName.ToLower().Contains("sold");
-
+                                    // the file name pattern must be <title string> <dimension string> cm [SOLD]                                    
+                                    var imgSrc = ImageGallery.ImgSrc(fileInfo.FullName);
+                                    var imgTitle = ImageGallery.ImgTitle(fileInfo);
+                                    var imgDimensions = ImageGallery.ImgDimesions(fileInfo);
+                                    var isSold = ImageGallery.IsSold(fileInfo);
+                                    var imgSrcWatermarked = ImageGallery.AddWatermarkToImage(fileInfo);
+                                    
                                     <div class="col-xs-6 col-md-4">
                                         <figure class="@(isSold ? "sold" : string.Empty)">
-                                            <a href="@imgSrc">
-                                                <img class="img-responsive" src="@imgSrc" />
+                                            <a href="@imgSrcWatermarked">
+                                                @*<img class="img-responsive" src="@imgSrc" />*@
+                                                <img class="img-responsive" src="@imgSrcWatermarked" />
                                             </a>
                                             <figcaption>
                                                 <ul class="list-unstyled">
@@ -264,6 +257,7 @@
                     }
 
                 </section>
+
             </div>
         </div>
 
