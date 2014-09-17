@@ -29,7 +29,7 @@ public class ImageGallery
         var imagesDir = HttpContext.Current.Server.MapPath("~/images/gallery/originals");
         if (!Directory.Exists(imagesDir))
         {
-            return null;
+            return Enumerable.Empty<FileInfo>();
         }
 
         var fileInfos = Directory.GetFiles(imagesDir, "*.jpg").Select(s => new FileInfo(s));
