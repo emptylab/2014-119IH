@@ -18,7 +18,7 @@ public class ImageGallery
         Watermark = new TextLayer();
         Watermark.Text = "Ingrid Hauss";
         Watermark.FontSize = 48;
-        Watermark.FontColor = System.Drawing.Color.Black;        
+        Watermark.FontColor = System.Drawing.Color.Black;
         Watermark.Opacity = 50;
 
         Size = new Size(300, 0);
@@ -27,6 +27,11 @@ public class ImageGallery
     public static IEnumerable<FileInfo> GetGalleryImages()
     {
         var imagesDir = HttpContext.Current.Server.MapPath("~/images/gallery/originals");
+        if (!Directory.Exists(imagesDir))
+        {
+            return null;
+        }
+
         var fileInfos = Directory.GetFiles(imagesDir, "*.jpg").Select(s => new FileInfo(s));
         return fileInfos;
     }
@@ -69,7 +74,7 @@ public class ImageGallery
         var imgSrc = ImageGallery.ImgSrc(savePath);
 
         if (!File.Exists(savePath))
-        {            
+        {
             byte[] imageBytes = File.ReadAllBytes(fileInfo.FullName);
             using (MemoryStream inStream = new MemoryStream(imageBytes))
             {
@@ -88,7 +93,7 @@ public class ImageGallery
                 }
             }
         }
-        
+
         return imgSrc;
     }
 
