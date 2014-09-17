@@ -96,6 +96,9 @@
     <Content Include="Scripts\holder.min.js.map" />
     <Content Include="index.cshtml" />
     <Content Include="packages.config" />
+    <Content Include="config\imageprocessor\cache.config" />
+    <Content Include="config\imageprocessor\processing.config" />
+    <Content Include="config\imageprocessor\security.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
