@@ -29,10 +29,10 @@ div.img-gallery {
     @img-height: 140px;
     @margin-small: 7px;
 
-    figure {
-        display: inline-block;
+    figure {        
         margin-bottom: 40px;
         position: relative;
+        max-width:100%;
 
         &.sold {
 
@@ -44,10 +44,6 @@ div.img-gallery {
                 position: absolute;
                 left: 0;
             }
-        }
-
-        a {
-            display: inline-block;
         }
 
         img {
@@ -62,7 +58,7 @@ div.img-gallery {
 
 footer {
     padding-top: 100px;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
 }
 
 #site-nav {
@@ -70,17 +66,25 @@ footer {
     .affix,
     .affix-bottom {
         padding-top: 40px;
-        display:table;
+        display: table;
     }
 
     .affix {
         top: 0;
     }
-    /*col-md collapse width*/
-    @media(max-width:992px) {
+}
+
+/*col-md collapse width*/
+@media(max-width:992px) {
+
+    #site-nav {
         .affix, .affix-top, .affix-bottom {
             position: static;
             display: none;
         }
+    }
+
+    [class|="col"] {
+        margin-bottom: 15px;
     }
 }

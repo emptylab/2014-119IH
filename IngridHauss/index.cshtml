@@ -85,6 +85,7 @@
                         <li><a href="mailto:@Config.Email">@Config.Email</a></li>
                         <li><a href="#bookings">Booking</a></li>
                         <li><a href="#classes">Classes</a></li>
+                        <li><a href="#renewal">Mind &amp; Body Renewal</a></li>
                         <li><a href="#retreats">Retreats</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#art">Art</a></li>
@@ -146,13 +147,31 @@
 
                 <section>
                     <div class="page-header">
+                        <h1 id="renewal">Mind &amp; Body Renewal</h1>
+                    </div>
+
+                    <div>
+
+                        <p>Mind &amp; Body Renewal classes are for people who are seeking to deepen and relax into the contemplative dimension of their lives through yoga, conscious breathing and restorative relaxation. Gentle yoga stretches, yoga postures and breathing exercises are introduced as a path for relaxation, stress reduction and renewal for body and mind.</p>
+                        <p>Bookings as workshops, retreat or class-series for private, corporate and educational organizations.</p>
+                        <p>More information about fees see under <a href="#bookings">"Bookings"</a>.</p>
+                    </div>
+
+
+                </section>
+
+                <section>
+                    <div class="page-header">
                         <h1 id="retreats">Retreats</h1>
                     </div>
 
                     <div class="row">
 
+                        <div class="col-md-6 col-md-push-6">
+                            <img alt="A painting of trees in the wind on the beach." class="img-responsive img-rounded img-thumbnail" src="images/island-reverie-xs.jpg" />
+                        </div>
 
-                        <div class="col-md-6">
+                        <div class="col-md-6 col-md-pull-6">
 
                             <ul class="list-group">
 
@@ -193,9 +212,7 @@
 
                         </div>
 
-                        <div class="col-md-6">
-                            <img alt="A painting of trees in the wind on the beach." class="img-responsive img-rounded img-thumbnail" src="images/island-reverie-xs.jpg" />
-                        </div>
+
                     </div>
 
                 </section>
@@ -229,27 +246,27 @@
                             <div class="row">
                                 @foreach (var fileInfo in ImageGallery.GetGalleryImages())
                                 {
-                                    // the file name pattern must be <title string> <dimension string> cm [SOLD]                                    
+                                    // the file name pattern must be <title string> <dimension string> cm [SOLD]
                                     var imgSrc = ImageGallery.ImgSrc(fileInfo.FullName);
                                     var imgTitle = ImageGallery.ImgTitle(fileInfo);
                                     var imgDimensions = ImageGallery.ImgDimesions(fileInfo);
                                     var isSold = ImageGallery.IsSold(fileInfo);
                                     var imgSrcWatermarked = ImageGallery.AddWatermarkToImage(fileInfo);
+
+                                <div class="col-sm-6 col-md-4">
                                     
-                                    <div class="col-xs-6 col-md-4">
-                                        <figure class="@(isSold ? "sold" : string.Empty)">
-                                            <a href="@imgSrcWatermarked">
-                                                @*<img class="img-responsive" src="@imgSrc" />*@
-                                                <img class="img-responsive" src="@imgSrcWatermarked" />
-                                            </a>
-                                            <figcaption>
-                                                <ul class="list-unstyled">
-                                                    <li>@imgTitle</li>
-                                                    <li>@imgDimensions</li>
-                                                </ul>
-                                            </figcaption>
-                                        </figure>
-                                    </div>
+                                    <figure class="@(isSold ? "sold" : string.Empty)">
+                                        <a href="@imgSrcWatermarked">                                           
+                                            <img class="img-responsive" src="@imgSrcWatermarked" />
+                                        </a>
+                                        <figcaption>
+                                            <ul class="list-unstyled">
+                                                <li>@imgTitle</li>
+                                                <li>@imgDimensions</li>
+                                            </ul>
+                                        </figcaption>
+                                    </figure>
+                                </div>
                                 }
                             </div>
                         </div>
