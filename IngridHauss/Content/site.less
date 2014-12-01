@@ -65,14 +65,18 @@ div.img-gallery {
 
 #site-nav {
 
-    ul ul > li {
-        // handle nested navs
-        margin-left: 25px;
+    ul ul {
+        margin-top: 2.5px;
 
-        &.active {
-            a {
-                color: darken(#428BCA, 40%);
-                background-color: lighten(#428BCA, 40%);
+        > li {
+            // handle nested navs
+            margin-left: 25px;
+
+            &.active {
+                a {
+                    color: darken(#428BCA, 40%);
+                    background-color: lighten(#428BCA, 32%);
+                }
             }
         }
     }
