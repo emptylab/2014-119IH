@@ -166,6 +166,101 @@
 
                     <section>
                         <h2 id="yogathedral">Yogathedral<sup>&trade;</sup> Walks</h2>
+
+                        <div class="panel panel-info">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Departure and return to described location, rain or shine!</li>
+                                    <li>Saturdays, 3 - 4:15 PM</li>
+                                    <li>$25 Drop-In</li>
+                                    <li>$75 for Five Sessions</li>
+                                    <li>Preregister with Ingrid at ingridhauss@yahoo.com or call 604-720-1460</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-md-6">
+                                <a href="~/documents/yogathedral.pdf">
+                                    <img alt="Waves crashing on the beach and details of the Yogathedral walks." class="img-responsive img-rounded img-thumbnail" src="~/images/yogathedral-xs.jpg" />
+                                </a>
+                            </div>
+
+                            <div class="col-md-6">
+
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        Additional Yogathedral Walks in 2015
+                                    </div>
+
+                                    <ul class="list-group">
+
+                                        <li class="list-group-item" itemscope itemtype="http://schema.org/Event">
+                                            <h4>Saturday January 10, 2015</h4>
+                                            <ul>
+                                                <li>Salmon Stream at Spanish Banks</li>
+                                                <li>Shoreline Cleanse and Woods' Tranquility</li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="list-group-item" itemscope itemtype="http://schema.org/Event">
+                                            <h4>Saturday February 7, 2015</h4>
+                                            <ul>
+                                                <li>
+                                                    Bowen Island Ferry Terminal, Village at Snug Cove
+                                                </li>
+                                                <li>Clear AIr Meadows and Meditative Falls</li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="list-group-item" itemscope itemtype="http://schema.org/Event">
+                                            <h4>Saturday March 7, 2015</h4>
+                                            <ul>
+                                                <li>
+                                                    Bowen Island Ferry Terminal
+                                                </li>
+                                                <li>
+                                                    Village at Snug Cove for Yoga
+                                                </li>
+                                                <li>
+                                                    Shuttle to destination
+                                                </li>
+                                                <li>
+                                                    Lake and Roots - Revitalisze and Renew!
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="list-group-item" itemscope itemtype="http://schema.org/Event">
+                                            <h4>Saturday April 4, 2015</h4>
+                                            <ul>
+                                                <li>
+                                                    UBC Endowments Lands
+                                                </li>
+                                                <li>
+                                                    Meet at University Village (at CIBC, Blenz Coffee, MacDonald)
+                                                </li>
+                                                <li>
+                                                    Wood Air Bathing on UBC Wooden Trail for Deep Contemplation and Renewal.
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="list-group-item" itemscope itemtype="http://schema.org/Event">
+                                            <h4>Saturday May 2, 2015</h4>
+                                            <ul>
+                                                <li>Lynn Valley, North Shore Vancouver</li>
+                                            </ul>
+                                        </li>
+
+                                    </ul>
+
+
+                                </div>
+
+                            </div>
+
                     </section>
 
                     <section>
@@ -265,20 +360,20 @@
                                     var isSold = ImageGallery.IsSold(fileInfo);
                                     var imgSrcWatermarked = ImageGallery.AddWatermarkToImage(fileInfo);
 
-                                <div class="col-sm-6 col-md-4">
+                                    <div class="col-sm-6 col-md-4">
 
-                                    <figure class="@(isSold ? "sold" : string.Empty)">
-                                        <a href="@imgSrcWatermarked">
-                                            <img class="img-responsive" src="@imgSrcWatermarked" />
-                                        </a>
-                                        <figcaption>
-                                            <ul class="list-unstyled">
-                                                <li>@imgTitle</li>
-                                                <li>@imgDimensions</li>
-                                            </ul>
-                                        </figcaption>
-                                    </figure>
-                                </div>
+                                        <figure class="@(isSold ? "sold" : string.Empty)">
+                                            <a href="@imgSrcWatermarked">
+                                                <img class="img-responsive" src="@imgSrcWatermarked" />
+                                            </a>
+                                            <figcaption>
+                                                <ul class="list-unstyled">
+                                                    <li>@imgTitle</li>
+                                                    <li>@imgDimensions</li>
+                                                </ul>
+                                            </figcaption>
+                                        </figure>
+                                    </div>
                                 }
                             </div>
                         </div>
