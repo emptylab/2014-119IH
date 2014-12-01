@@ -62,6 +62,18 @@ footer {
 }
 
 #site-nav {
+    
+    ul ul > li {
+        // handle nested navs
+        margin-left: 25px;
+        &.active {
+            a {
+                color:darken(#428BCA, 40%);
+                background-color:lighten(#428BCA, 40%);
+            }
+        }
+    }
+
     .affix-top,
     .affix,
     .affix-bottom {
