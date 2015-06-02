@@ -1,0 +1,22 @@
+{
+  "name": "IngridHauss",
+  "version": "1.0.0",
+  "description": "Brochure website for Ingrid Hauss",
+  "main": "index.cshtml",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bigfont/2014-119IH"
+  },
+  "keywords": [
+    "client"
+  ],
+  "author": "Shaun Luttin at BigFont.ca",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bigfont/2014-119IH/issues"
+  },
+  "homepage": "https://github.com/bigfont/2014-119IH"
+}
