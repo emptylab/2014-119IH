@@ -18,5 +18,12 @@
   "bugs": {
     "url": "https://github.com/bigfont/2014-119IH/issues"
   },
-  "homepage": "https://github.com/bigfont/2014-119IH"
+  "homepage": "https://github.com/bigfont/2014-119IH",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-less": "^3.0.3",
+    "gulp-plumber": "^1.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-watch": "^4.2.4"
+  }
 }
