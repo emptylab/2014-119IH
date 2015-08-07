@@ -1,7 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-
     @{
         var Config = new
         {
@@ -12,18 +11,14 @@
             TagLine = "Art & Renewal."
         };
     }
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="@Config.FirstName @Config.LastName @Config.TagLine official site for bookings, classes, retreats, and art gallery." />
     <meta name="keywords" content="yoga, art, retreats, hatha, yin" />
-
     <title>@Config.FirstName @Config.LastName | @Config.TagLine</title>
-
     <link href="@Fingerprint.Tag("/Content/favicon.ico")" rel="shortcut icon" />
     <link href="@Fingerprint.Tag("/Content/site.min.css")" rel="stylesheet" />
-
     <!-- Bootstrap -->
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -36,31 +31,22 @@
         @@-webkit-viewport {
             width: device-width;
         }
-
         @@-moz-viewport {
             width: device-width;
         }
-
         @@-ms-viewport {
             width: device-width;
         }
-
         @@-o-viewport {
             width: device-width;
         }
-
         @@viewport {
             width: device-width;
         }
     </style>
-
 </head>
 <body data-spy="scroll" data-target="#site-nav">
-
-
-
     <div class="container">
-
         <header class="row">
             <div class="col-md-4">
                 <img alt="A black and white zen drawing of a stick figure person surrounded by a fire." class="img-responsive" src="images/energetic-warrior-xs.jpg" />
@@ -70,15 +56,11 @@
                 <h2>@Config.TagLine</h2>
             </div>
         </header>
-
         <div class="row">
-
             <div class="col-md-4">
-
                 <p class="visible-sm visible-xs">
                     <a href="tel:@Config.Phone">@Config.Phone</a> | <a href="mailto:@Config.Email">@Config.Email</a>
                 </p>
-
                 <div id="site-nav">
                     <ul class="nav nav-pills nav-stacked" role="tablist" data-offset-top="250" data-spy="affix">
                         <li><a href="tel:@Config.Phone">@Config.Phone</a></li>
@@ -93,49 +75,38 @@
                                 <li><a href="#yoga-tales">Yoga Tales<sup>&trade;</sup></a></li>
                             </ul>
                         </li>
-
                         <li><a href="#about">About</a></li>
                         <li><a href="#art">Art</a></li>
                     </ul>
                 </div>
             </div>
-
             <div class="col-md-8">
-
                 <section>
                     <div class="page-header">
                         <h1 id="bookings">Bookings</h1>
                     </div>
                     <div class="row">
                         <div class="col-sm-6">
-
                             <h4>Private Indoor or Outdoor Sessions</h4>
-
                             <ul class="list-unstyled">
                                 <li>Pilates, Yoga, and Restorative</li>
                                 <li>Contact @Config.FirstName at @Config.Phone</li>
                             </ul>
-
                             <h4>Rate</h4>
-
                             <ul class="list-unstyled">
                                 <li>$90 per hour for group size of 5 persons. </li>
                                 <li>For larger groups inquire for rate with Ingrid.</li>
                             </ul>
-
                             <h4>
                                 Introductory Special
                             </h4>
                             <p>First class at $90 per hour for all group sizes.</p>
-
                         </div>
-
                         <div class="col-sm-6">
                             <img alt="Four women practicing yoga outside on the grass. There is a blue sky, green trees, and a beautiful fence around the practice area." class="img-responsive img-rounded img-thumbnail" src="images/urban-yoga-xs.jpg" />
                         </div>
                     </div>
                 </section>
-
                 <section>
                     <div class="page-header">
                         <h1 id="classes">Classes</h1>
@@ -162,148 +133,133 @@
                             <img alt="A zen style drawing of a thin curve with a tiny red ball that appears to be rolling just up one side." class="img-responsive img-rounded img-thumbnail" src="images/meditation-xs.jpg" />
                         </div>
                     </div>
-
                 </section>
-
                 <section>
                     <div class="page-header">
                         <h1 id="renewal">Mind &amp; Body Renewal</h1>
                     </div>
-
                     <div>
-
                         <p>Mind &amp; Body Renewal classes are for people who are seeking to deepen and relax into the contemplative dimension of their lives through yoga, conscious breathing and restorative relaxation. Gentle yoga stretches, yoga postures and breathing exercises are introduced as a path for relaxation, stress reduction and renewal for body and mind.</p>
                         <p>Bookings as workshops, retreat or class-series for private, corporate and educational organizations.</p>
                         <p>More information about fees see under <a href="#bookings">"Bookings"</a>.</p>
                     </div>
-
                     <section>
                         <h2 id="yogathedral">Yogathedral<sup>&trade;</sup> Walks</h2>
-
                         <div class="panel panel-info">
                             <div class="panel-heading">
-                                Yogathedral's Dates for Fall 2015
+                                Yogathedral<sup>&trade;</sup> Dates for Fall 2015
                             </div>
-                            <div class="panel-body">
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <h4>
-                                            Where?
-                                        </h4>
-                                        <p>Bowen Island, B.C.</p>
-                                        <p>Meet at Snug Cove Ferry Terminal</p>
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <h4>
+                                                Where?
+                                            </h4>
+                                            <p>Bowen Island, B.C.</p>
+                                            <p>Meet at Snug Cove Ferry Terminal</p>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <h4>
+                                                When?
+                                            </h4>
+                                            <p>Monthly Saturdays, 3 - 4:30 PM</p>
+                                            <ul>
+                                                <li>October 3, 2015</li>
+                                                <li>November 7, 2015</li>
+                                                <li>December 5, 2015</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <h4>What?</h4>
+                                            <p>Renewal through mindful movement and meditation in nature.</p>
+                                        </div>
                                     </div>
-                                    <div class="col-md-4">
-                                        <h4>
-                                            When?
-                                        </h4>
-                                        <p>Monthly Saturdays, 3:00-4:30pm</p>
-
-                                        <ul>
-                                            <li>October 3, 2015</li>
-                                            <li>November 7, 2015</li>
-                                            <li>December 5, 2015</li>
-                                        </ul>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <img class="img-responsive img-thumbnail" src="~/images/yogathedral-fall-2015.jpg" />
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h4>How much?</h4>
+                                            <p>Preregistration: $25</p>
+                                            <p>Fee includes:</p>
+                                            <p>75 minutes of yoga, breathing awareness and renewal techniques + guided movement meditation in nature, our shuttle service, if required from and to Yogathedral's walk on the island and a delicious vegetarian soup at the end.</p>
+                                            <p>Foot passenger ferry fee or swimming across tolls (:-) from Horseshoe Bay to Snug Cove of $11.95 (return inclusive!) not included.</p>
+                                        </div>
                                     </div>
-                                    <div class="col-md-4">
-                                        <h4>What?</h4>
-                                        <p>Renewal through mindful movement and meditation in nature.</p>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <h4>How?</h4>
+                                            <p>Preregistration required by cheque or cash in person or by postal mail made out to Ingrid Hauss.</p>
+                                            <p>Payment is non-refundable, except in case of event's cancelation due to wet weather.</p>
+                                            <p>Upon registration: You will receive a letter with a waiver and details regarding travel.</p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h4>Mail to</h4>
+                                            <address>
+                                                Ingrid Hauss, B.A. RYT,<br />
+                                                Dipl. VST Spiritual Facilitation and  Coaching.<br />
+                                                Studio for Art & Renewal<br /><br />
+                                                Dr. Darryl Grigg<br />
+                                                Psychological and Consulting Services<br /><br />
+                                                #3 - 2025 West 16th Ave<br />
+                                                Vancouver, B.C.<br />
+                                                V6J 2M6<br />
+                                            </address>
+                                        </div>
                                     </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <h4>How much?</h4>
-                                        <p>Preregistration: $25</p>
-
-                                        <p>Fee includes</p>
-                                        <p>75 minutes of yoga, breathing awareness and renewal techniques + guided movement meditation in nature, our shuttle service, if required from and to Yogathedral's walk on the island and a delicious vegetarian soup at the end.</p>
-                                        <p>Foot passenger ferry fee or swimming across tolls (:-) from Horseshoe Bay to Snug Cove of $11.95 (return inclusive!) not included.</p>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <h4>Why?</h4>
+                                            <p>
+                                                Come... as you are and be yourself even more after this powerful renewal experience.
+                                            </p>
+                                            <p>
+                                                Soak and integrate...your soul in green space while consciously immersing in the healing and cleansing qualities of 'wood air bathing' amidst beauty of nature.
+                                            </p>
+                                            <p>
+                                                Steep...in the sounds of waterfalls, streams and breezes while gazing upon wide and spacious vistas of the variable landscapes we are guided through on this renewal experience.
+                                            </p>
+                                            <p>
+                                                Restore...through Yogathedral's unique invitation to renew and recharge in your body and mind.
+                                            </p>
+                                            <p>
+                                                Sharing and Reflection...over soup delight served by Darryl Grigg at the final end of Yogathedral's active component at a special natural site.
+                                            </p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h4>Why not?</h4>
+                                            <p>
+                                                live fully<br />
+                                                into the why not<br />
+                                                by letting this<br />
+                                                invitation<br />
+                                                be one to you<br />
+                                                soul starved or not<br />
+                                                to gaze and<br />
+                                                take a long loving look<br />
+                                                at the real<br />
+                                                inside<br />
+                                                & out.<br />
+                                            </p>
+                                            <p>
+                                                Ingrid Hauss, August 2015
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
-
-
-                                <div class="row">
-                                    <div class="col-md-12">
-
-                                        <img src="" alt="todo" />
-
-                                        <h4>How?</h4>
-                                        <p>Preregistration required by cheque or cash in person or by postal mail made out to Ingrid Hauss.</p>
-
-                                        <p>Mail to:</p>
-                                        <address>
-                                            Ingrid Hauss, B.A. RYT,<br />
-                                            Dipl. VST Spiritual Facilitation and  Coaching.<br />
-                                            Studio for Art & Renewal &<br /><br />
-                                            Dr. Darryl Grigg<br />
-                                            Psychological and Consulting Services<br /><br />
-                                            #3 - 2025 West 16th Ave<br />
-                                            Vancouver, B.C.<br />
-                                            V6J 2M6<br />
-                                        </address>
-
-                                        <p>Payment is non-refundable, except in case of event's cancelation due to wet weather.</p>
-
-                                        <p>Upon registration:</p>
-                                        <p>You will receive a letter with a waiver and details regarding travel.</p>
-
-                                    </div>
-                                </div>
-
-
-                                <div class="row">
-
-                                    <div class="col-md-6">
-                                        <h4>Why?</h4>
-                                        <p>
-                                            Come... as you are and be yourself even more after this powerful renewal experience.
-                                        </p>
-                                        <p>
-                                            Soak and integrate...your soul in green space while consciously immersing in the healing and cleansing qualities of 'wood air bathing' amidst beauty of nature.
-                                        </p>
-                                        <p>
-                                            Steep...in the sounds of waterfalls, streams and breezes while gazing upon wide and spacious vistas of the variable landscapes we are guided through on this renewal experience.
-                                        </p>
-                                        <p>
-                                            Restore...through Yogathedral's unique invitation to renew and recharge in your body and mind.
-                                        </p>
-                                        <p>
-                                            Sharing and Reflection...over soup delight served by Darryl Grigg at the final end of Yogathedral's active component at a special natural site.
-                                        </p>
-
-                                    </div>
-                                    <div class="col-md-6">
-
-                                        <h4>Why not?</h4>
-                                        <p>
-                                            live fully<br />
-                                            into the why not<br />
-                                            by letting this<br />
-                                            invitation<br />
-                                            be one to you<br />
-                                            soul starved or not<br />
-                                            to gaze and<br />
-                                            take a long loving look<br />
-                                            at the real<br />
-                                            inside<br />
-                                            & out.<br />
-                                        </p>
-
-                                        <p>
-                                            Ingrid Hauss, August 2015
-                                        </p>
-
-                                    </div>
-
-
-
-                                </div>
-
-                            </div>
+                                </li>
+                            </ul>
                         </div>
-
                         <div class="panel panel-info">
+                            <div class="panel-heading">
+                                Yogathedral Dates for Winter &amp; Summer 2015
+                            </div>
                             <div class="panel-body">
                                 <ul>
                                     <li>Departure and return to described location, rain or shine!</li>
@@ -314,24 +270,18 @@
                                 </ul>
                             </div>
                         </div>
-
                         <div class="row">
-
                             <div class="col-md-5">
                                 <a href="~/documents/yogathedral.pdf">
                                     <img alt="Waves crashing on the beach and details of the Yogathedral walks." class="img-responsive img-rounded img-thumbnail" src="~/images/yogathedral-xs.jpg" />
                                 </a>
                             </div>
-
                             <div class="col-md-7">
-
                                 <div class="panel panel-info">
                                     <div class="panel-heading">
                                         Additional Yogathedral Walks in 2015
                                     </div>
-
                                     <ul class="list-group">
-
                                         <li class="list-group-item" itemscope itemtype="http://schema.org/Event">
                                             <h4>Saturday February 7, 2015</h4>
                                             <ul>
@@ -341,7 +291,6 @@
                                                 <li>Clear AIr Meadows and Meditative Falls</li>
                                             </ul>
                                         </li>
-
                                         <li class="list-group-item" itemscope itemtype="http://schema.org/Event">
                                             <h4>Saturday March 7, 2015</h4>
                                             <ul>
@@ -359,7 +308,6 @@
                                                 </li>
                                             </ul>
                                         </li>
-
                                         <li class="list-group-item" itemscope itemtype="http://schema.org/Event">
                                             <h4>Saturday April 4, 2015</h4>
                                             <ul>
@@ -374,7 +322,6 @@
                                                 </li>
                                             </ul>
                                         </li>
-
                                         <li class="list-group-item" itemscope itemtype="http://schema.org/Event">
                                             <h4>Saturday May 2, 2015</h4>
                                             <ul>
@@ -384,7 +331,6 @@
                                                 <li>Woods, greens, and waterfalls - Woodair bathe and renew in body and mind</li>
                                             </ul>
                                         </li>
-
                                         <li class="list-group-item" itemscope itemtype="http://schema.org/Event">
                                             <h4>Saturday June 06, 2015</h4>
                                             <ul>
@@ -392,29 +338,19 @@
                                                 <li>Spanish Banks - A Shoreline Cleanse</li>
                                             </ul>
                                         </li>
-
                                     </ul>
-
                                 </div>
-
                             </div>
                         </div>
-
                     </section>
-
                     <section>
                         <h2 id="retreats">Retreats</h2>
-
                         <div class="row">
-
                             <div class="col-md-6 col-md-push-6">
                                 <img alt="A painting of trees in the wind on the beach." class="img-responsive img-rounded img-thumbnail" src="images/island-reverie-xs.jpg" />
                             </div>
-
                             <div class="col-md-6 col-md-pull-6">
-
                                 <ul class="list-group">
-
                                     <li class="list-group-item" itemscope itemtype="http://schema.org/Event">
                                         <h4 itemprop="name">Body Prayer Retreat</h4>
                                         <div itemprop="location" itemscope itemtype="http://schema.org/Place">
@@ -436,7 +372,6 @@
                                         <p itemprop="offers">To Register Contact: office@stphilipvictoria.ca or call Gillian Fosdick at 250-592-6823</p>
                                         <p itemprop="description">Body Prayer is a retreat for people who are seeking to deepen the contemplative dimension of their spiritual life through the practice of yoga and meditation. Gentle yoga stretching, yoga poses and breathing exercises are introduced as a path for relaxation, rejuvenation and stress reduction.</p>
                                     </li>
-
                                     <li class="list-group-item" itemscope itemtype="http://schema.org/Event">
                                         <h4>
                                             <span itemprop="name">Yoga In-Fusion &trade;</span>
@@ -447,31 +382,21 @@
                                         <p itemprop="offers">Contact Ingrid to book.</p>
                                         <p itemprop="description">Music by Willy Miles-Grenzberg. Yoga instruction by Ingrid Hauss.</p>
                                     </li>
-
                                 </ul>
-
                             </div>
-
-
                         </div>
-
                     </section>
-
                     <section>
                         <h2 id="yoga-tales">
                             Yoga Tales<sup>&trade;</sup>
                         </h2>
-
                         <div class="row">
-
                             <div class="col-md-6 col-md-push-6">
                                 <a href="~/documents/yoga-tales.pdf">
                                     <img alt="A collection of toy animals on the cut stump of a tree." class="img-responsive img-rounded img-thumbnail" src="~/images/yoga-tales-xs.jpg" />
                                 </a>
                             </div>
-
                             <div class="col-md-6 col-md-pull-6">
-
                                 <div class="panel panel-info">
                                     <div class="panel-heading">
                                         Yoga for ages 7 - 11
@@ -497,19 +422,15 @@
                                         <li class="list-group-item">
                                             <ul>
                                                 <li>At Ganges Yoga Studio with Ingrid Hauss</li>
-
                                                 <li>
                                                     Preregistration with payment at Ganges Yoga Studio 250-537-4658
                                                 </li>
                                             </ul>
                                         </li>
                                     </ul>
-
                                 </div>
-
                             </div>
                         </div>
-
                         <div class="row">
                             <div class="col-md-10 col-md-push-1">
                                 <p>
@@ -526,16 +447,12 @@
                                     </ul>
                             </div>
                         </div>
-
                     </section>
-
                 </section>
-
                 <section>
                     <div class="page-header">
                         <h1 id="about">About</h1>
                     </div>
-
                     <div class="row">
                         <div class="col-sm-6">
                             <img class="img-responsive img-thumbnail" src="/images/about-me-log-10x10-xs.jpg" alt="This is a placeholder image.">
@@ -547,14 +464,11 @@
                             </p>
                         </div>
                     </div>
-
                 </section>
-
                 <section>
                     <div class="page-header">
                         <h1 id="art">Art</h1>
                     </div>
-
                     @{
                         <div class="img-gallery">
                             <div class="row">
@@ -566,9 +480,7 @@
                                     var imgDimensions = ImageGallery.ImgDimesions(fileInfo);
                                     var isSold = ImageGallery.IsSold(fileInfo);
                                     var imgSrcWatermarked = ImageGallery.AddWatermarkToImage(fileInfo);
-
                                     <div class="col-sm-6 col-md-4">
-
                                         <figure class="@(isSold ? "sold" : string.Empty)">
                                             <a href="@imgSrcWatermarked">
                                                 <img class="img-responsive" src="@imgSrcWatermarked" />
@@ -585,12 +497,9 @@
                             </div>
                         </div>
                     }
-
                 </section>
-
             </div>
         </div>
-
         <footer class="footer">
             <div class="pull-right">
                 <span>&copy; Copyright 2014 @Config.FirstName @Config.LastName</span> |
@@ -598,12 +507,9 @@
                 <span>Website by </span><a href="http://www.bigfont.ca">BigFont</a>
             </div>
         </footer>
-
     </div>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
-
     @*IE 10*@
     <script type="text/javascript">
         if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
@@ -617,5 +523,4 @@
         }
     </script>
 </body>
-
 </html>
