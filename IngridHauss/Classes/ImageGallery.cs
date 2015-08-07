@@ -46,7 +46,8 @@ public class ImageGallery
         var relativeSavePath = savePath
             .Replace(siteDir, string.Empty)
             .Replace("\\", "/");
-        return HttpContext.Current.Server.UrlEncode(relativeSavePath);
+        return relativeSavePath;
+        // return HttpContext.Current.Server.UrlEncode(relativeSavePath);
     }
 
     public static string ImgTitle(FileInfo fileInfo)
