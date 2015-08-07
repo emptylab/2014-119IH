@@ -43,10 +43,10 @@ public class ImageGallery
     public static string ImgSrc(string savePath)
     {
         var siteDir = HttpContext.Current.Server.MapPath("~/");
-        return savePath
+        var relativeSavePath = savePath
             .Replace(siteDir, string.Empty)
-            .Replace(" ", "%20")
             .Replace("\\", "/");
+        return HttpContext.Current.Server.UrlEncode(relativeSavePath);
     }
 
     public static string ImgTitle(FileInfo fileInfo)
