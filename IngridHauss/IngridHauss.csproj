@@ -19,6 +19,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -93,6 +94,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="images\yoga-tales-orig.jpg" />
     <Content Include="images\yoga-tales-xs.jpg" />
+    <Content Include="images\yogathedral-fall-2015-orig.jpg" />
+    <Content Include="images\yogathedral-fall-2015-xs.jpg" />
     <Content Include="images\yogathedral-orig.jpg" />
     <Content Include="images\yogathedral-xs.jpg" />
     <Content Include="Scripts\bootstrap.min.js.map" />
