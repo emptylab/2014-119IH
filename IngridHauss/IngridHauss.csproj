@@ -98,6 +98,8 @@
     <Content Include="images\yogathedral-fall-2015-orig.jpg" />
     <Content Include="images\yogathedral-fall-2015-xs.jpg" />
     <Content Include="images\yogathedral-orig.jpg" />
+    <Content Include="images\yogathedral-vista.jpg" />
+    <Content Include="images\yogathedral-warrior.jpg" />
     <Content Include="images\yogathedral-xs.jpg" />
     <Content Include="Scripts\bootstrap.min.js.map" />
     <Content Include="Scripts\holder.min.js.map" />
