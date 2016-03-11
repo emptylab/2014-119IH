@@ -88,10 +88,13 @@ div.img-gallery figure figcaption {
   color: #0e2132;
   background-color: #c1d9ee;
 }
+#site-nav li.contact a {
+  color: black;
+}
 #site-nav .affix-top,
 #site-nav .affix,
 #site-nav .affix-bottom {
-  padding-top: 40px;
+  padding-top: 20px;
   display: table;
 }
 #site-nav .affix {
