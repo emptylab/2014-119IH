@@ -10,7 +10,6 @@ using System.Drawing.Imaging;
 
 /// <summary>
 /// The gallery requires the following directory structure.
-/// 
 /// </summary>
 public class ImageGallery
 {
