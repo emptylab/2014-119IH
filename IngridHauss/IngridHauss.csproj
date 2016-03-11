@@ -86,7 +86,12 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\site.less" />
+    <Content Include="Content\page.css">
+      <DependentUpon>page.less</DependentUpon>
+    </Content>
+    <Content Include="Content\page.min.css">
+      <DependentUpon>page.css</DependentUpon>
+    </Content>
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -109,18 +114,32 @@
     <Content Include="config\imageprocessor\processing.config" />
     <Content Include="config\imageprocessor\security.config" />
     <Content Include="documents\yogathedral.pdf" />
+    <Content Include="Content\page.less" />
+    <Content Include="Content\page.css.map">
+      <DependentUpon>page.css</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="_SiteNav.cshtml" />
+    <Content Include="_SectionBookings.cshtml" />
+    <Content Include="_SectionClasses.cshtml" />
+    <Content Include="_SectionYogathedral.cshtml" />
+    <Content Include="_SectionRetreats.cshtml" />
+    <Content Include="_SectionYogaTales.cshtml" />
+    <Content Include="_SectionAbout.cshtml" />
+    <Content Include="_SectionArt.cshtml" />
+    <Content Include="_Footer.cshtml" />
+    <Content Include="_Scripts.cshtml" />
+    <Content Include="_Header.cshtml" />
+    <Content Include="_SectionTopPromotion.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\favicon.ico" />
-    <Content Include="Content\site.min.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="images\about-me-10x10-orig.jpg" />
     <Content Include="images\about-me-10x10-xs.jpg" />
@@ -140,7 +159,9 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\holder.js" />
     <Content Include="Scripts\holder.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Fingerprint.cs" />

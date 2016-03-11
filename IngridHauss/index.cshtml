@@ -1,16 +1,18 @@
 ﻿<!DOCTYPE html>
+
+@{
+    var Config = new
+    {
+        FirstName = "Ingrid",
+        LastName = "Hauss",
+        Email = "ingrid@ingridhauss.com",
+        Phone = "+1-604-720-1460",
+        TagLine = "Art & Renewal."
+    };
+}
+
 <html lang="en">
 <head>
-    @{
-        var Config = new
-        {
-            FirstName = "Ingrid",
-            LastName = "Hauss",
-            Email = "ingrid@ingridhauss.com",
-            Phone = "+1-604-720-1460",
-            TagLine = "Art & Renewal."
-        };
-    }
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,7 +20,7 @@
     <meta name="keywords" content="yoga, art, retreats, hatha, yin" />
     <title>@Config.FirstName @Config.LastName | @Config.TagLine</title>
     <link href="@Fingerprint.Tag("/Content/favicon.ico")" rel="shortcut icon" />
-    <link href="@Fingerprint.Tag("/Content/site.min.css")" rel="stylesheet" />
+    <link href="@Fingerprint.Tag("/Content/page.min.css")" rel="stylesheet" />
     <!-- Bootstrap -->
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -26,8 +28,8 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    @*IE 10*@
     <style type="text/css">
+        /*IE 10*/
         @@-webkit-viewport {
             width: device-width;
         }
@@ -49,103 +51,19 @@
         }
     </style>
 </head>
-<body data-spy="scroll" data-target="#site-nav">    
-    
-    @RenderPage("_SiteNav.cshtml")
-    
+<body data-spy="scroll" data-target="#site-nav">
     <div class="container">
         <header class="row">
-            <div class="col-md-4">
-                <img alt="A black and white zen drawing of a stick figure person surrounded by a fire." class="img-responsive" src="images/energetic-warrior-xs.jpg" />
-            </div>
-            <div class="col-md-8">
-                <h1>@Config.FirstName @Config.LastName</h1>
-                <h2>@Config.TagLine</h2>
-            </div>
+            @RenderPage("_Header.cshtml", Config)
         </header>
         <div class="row">
             <div class="col-md-4">
-                <p class="visible-sm visible-xs">
-                    <a href="tel:@Config.Phone">@Config.Phone</a> | <a href="mailto:@Config.Email">@Config.Email</a>
-                </p>
-                <div id="site-nav">
-                    <ul class="nav nav-pills nav-stacked" role="tablist" data-offset-top="250" data-spy="affix">
-                        <li><a href="tel:@Config.Phone">@Config.Phone</a></li>
-                        <li><a href="mailto:@Config.Email">@Config.Email</a></li>
-                        <li><a href="#bookings">Bookings</a></li>
-                        <li><a href="#classes">Classes</a></li>
-                        <li>
-                            <a href="#renewal">Mind &amp; Body Renewal</a>
-                            <ul class="nav nav-pills nav-stacked">
-                                <li><a href="#yogathedral">Yogathedral<sup>&trade;</sup> Walks</a></li>
-                                <li><a href="#retreats">Retreats</a></li>
-                                <li><a href="#yoga-tales">Yoga Tales<sup>&trade;</sup></a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#art">Art</a></li>
-                    </ul>
-                </div>
+                @RenderPage("_SiteNav.cshtml", Config)
             </div>
             <div class="col-md-8">
-                <section>
-                    <a class="btn btn-info" href="https://www.direct2artist.com/artists/ingrid-hauss">
-                        View additional art in Ingrid's web-gallery under Ingrid Hauss at Direct2Artist.
-                    </a>
-                </section>
-                <section>
-                    <div class="page-header">
-                        <h1 id="bookings">Bookings</h1>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <h4>Private Indoor or Outdoor Sessions</h4>
-                            <ul class="list-unstyled">
-                                <li>Pilates, Yoga, and Restorative</li>
-                                <li>Contact @Config.FirstName at @Config.Phone</li>
-                            </ul>
-                            <h4>Rate</h4>
-                            <ul class="list-unstyled">
-                                <li>$90 per hour for group size of 5 persons. </li>
-                                <li>For larger groups inquire for rate with Ingrid.</li>
-                            </ul>
-                            <h4>
-                                Introductory Special
-                            </h4>
-                            <p>First class at $90 per hour for all group sizes.</p>
-                        </div>
-                        <div class="col-sm-6">
-                            <img alt="Four women practicing yoga outside on the grass. There is a blue sky, green trees, and a beautiful fence around the practice area." class="img-responsive img-rounded img-thumbnail" src="images/urban-yoga-xs.jpg" />
-                        </div>
-                    </div>
-                </section>
-                <section>
-                    <div class="page-header">
-                        <h1 id="classes">Classes</h1>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <h4><a href="http://opendooryoga.bc.ca/">Open Door Yoga</a> <small>Kerrisdale</small></h4>
-                            <dl>
-                                <dt>Fridays</dt>
-                                <dd>4 PM YIN</dd>
-                                <dt>Saturdays</dt>
-                                <dd>8:30 AM HATHA</dd>
-                                <dd>10:15 AM HATHA</dd>
-                                <dt>Sundays</dt>
-                                <dd>4:15 PM HATHA</dd>
-                            </dl>
-                            <h4><a href="http://www.semperviva.com/">Semperviva Yoga</a> <small>Sun Centre</small></h4>
-                            <dl>
-                                <dt>Sundays</dt>
-                                <dd>7 PM HATHA</dd>
-                            </dl>
-                        </div>
-                        <div class="col-md-6">
-                            <img alt="A zen style drawing of a thin curve with a tiny red ball that appears to be rolling just up one side." class="img-responsive img-rounded img-thumbnail" src="images/meditation-xs.jpg" />
-                        </div>
-                    </div>
-                </section>
+                @RenderPage("_SectionTopPromotion.cshtml", Config)
+                @RenderPage("_SectionBookings.cshtml", Config)
+                @RenderPage("_SectionClasses.cshtml", Config)
                 <section>
                     <div class="page-header">
                         <h1 id="renewal">Mind &amp; Body Renewal</h1>
@@ -155,448 +73,16 @@
                         <p>Bookings as workshops, retreat or class-series for private, corporate and educational organizations.</p>
                         <p>More information about fees see under <a href="#bookings">"Bookings"</a>.</p>
                     </div>
-                    <section>
-                        <h2 id="yogathedral">Yogathedral<sup>&trade;</sup> Walks</h2>
-                        <div class="panel panel-info">
-                            <div class="panel-heading">
-                                Yogathedral<sup>&trade;</sup> Dates for Fall 2015
-                            </div>
-                            <ul class="list-group">
-                                <li class="list-group-item">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <h4>
-                                                Where?
-                                            </h4>
-                                            <p>Bowen Island, B.C.</p>
-                                            <p>Meet at Snug Cove Ferry Terminal</p>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <h4>
-                                                When?
-                                            </h4>
-                                            <p>Monthly Saturdays, 3 - 4:30 PM</p>
-                                            <ul>
-                                                <li>October 3, 2015</li>
-                                                <li>November 7, 2015</li>
-                                                <li>December 5, 2015</li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <h4>What?</h4>
-                                            <p>Renewal through mindful movement and meditation in nature.</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="list-group-item">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <p>
-                                                <img class="img-responsive img-thumbnail" src="~/images/yogathedral-fall-2015-xs.jpg" alt="An oil pastel image by Ingrid Hauss of mountains in a sunset on the water." />
-                                            </p>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <h4>How much?</h4>
-                                            <p>Preregistration: $25</p>
-                                            <p>Fee includes:</p>
-                                            <p>75 minutes of yoga, breathing awareness and renewal techniques + guided movement meditation in nature, our shuttle service, if required from and to Yogathedral's<sup>&trade;</sup> walk on the island and a delicious vegetarian soup at the end.</p>
-                                            <p>Foot passenger ferry fee or swimming across tolls (:-) from Horseshoe Bay to Snug Cove of $11.95 (return inclusive!) not included.</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="list-group-item">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <h4>How?</h4>
-                                            <p>Preregistration required by cheque or cash in person or by postal mail made out to Ingrid Hauss.</p>
-                                            <p>Payment is non-refundable, except in case of event's cancelation due to wet weather.</p>
-                                            <p>Upon registration: You will receive a letter with a waiver and details regarding travel.</p>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <h4>Mail to</h4>
-                                            <address>
-                                                Ingrid Hauss, B.A. RYT,<br />
-                                                Dipl. VST Spiritual Facilitation and  Coaching.<br />
-                                                Studio for Art & Renewal<br /><br />
-                                                Dr. Darryl Grigg<br />
-                                                Psychological and Consulting Services<br /><br />
-                                                #3 - 2025 West 16th Ave<br />
-                                                Vancouver, B.C.<br />
-                                                V6J 2M6<br />
-                                            </address>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="list-group-item">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <h4>Why?</h4>
-                                            <p>
-                                                Come... as you are and be yourself even more after this powerful renewal experience.
-                                            </p>
-                                            <p>
-                                                Soak and integrate...your soul in green space while consciously immersing in the healing and cleansing qualities of 'wood air bathing' amidst beauty of nature.
-                                            </p>
-                                            <p>
-                                                Steep...in the sounds of waterfalls, streams and breezes while gazing upon wide and spacious vistas of the variable landscapes we are guided through on this renewal experience.
-                                            </p>
-                                            <p>
-                                                Restore...through Yogathedral's<sup>&trade;</sup> unique invitation to renew and recharge in your body and mind.
-                                            </p>
-                                            <p>
-                                                Sharing and Reflection...over soup delight served by Darryl Grigg at the final end of Yogathedral's<sup>&trade;</sup> active component at a special natural site.
-                                            </p>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <h4>Why not?</h4>
-                                            <p>
-                                                live fully<br />
-                                                into the why not<br />
-                                                by letting this<br />
-                                                invitation<br />
-                                                be one to you<br />
-                                                soul starved or not<br />
-                                                to gaze and<br />
-                                                take a long loving look<br />
-                                                at the real<br />
-                                                inside<br />
-                                                & out.<br />
-                                            </p>
-                                            <p>
-                                                Ingrid Hauss, August 2015
-                                            </p>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="panel panel-info">
-                            <div class="panel-heading">
-                                Yogathedral<sup>&trade;</sup> Dates for Winter &amp; Summer 2015
-                            </div>
-                            <div class="panel-body">
-                                <ul>
-                                    <li>Departure and return to described location, rain or shine!</li>
-                                    <li>Saturdays, 3 - 4:15 PM</li>
-                                    <li>$25 Drop-In</li>
-                                    <li>$75 for Five Sessions</li>
-                                    <li>Preregister with Ingrid at ingridhauss@yahoo.com or call 604-720-1460</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-5">
-                                <div class="text-center">
-                                    <p>
-                                        <img src="/images/yogathedral-vista.jpg"
-                                             class="img-responsive img-rounded img-thumbnail"
-                                             alt="A silhouette of a person doing the warrior yoga pose in front of an ocean vista.">
-                                    </p>
-                                    <p>
-                                        <img src="/images/yogathedral-warrior.jpg"
-                                             class="img-responsive img-rounded img-thumbnail"
-                                             alt="A group of four people doing the warrior yoga pose in the woods on a sunny day.">
-                                    </p>
-                                    <p>photo credits: Sharron Christi</p>
-                                </div>
-                            </div>
-                            <div class="col-md-7">
-                                <div class="panel panel-info">
-                                    <div class="panel-heading">
-                                        Additional Yogathedral<sup>&trade;</sup> Walks in 2015
-                                    </div>
-                                    <ul class="list-group">
-                                        <li class="list-group-item" itemscope itemtype="http://schema.org/Event">
-                                            <h4>Saturday February 7, 2015</h4>
-                                            <ul>
-                                                <li>
-                                                    Bowen Island Ferry Terminal, Village at Snug Cove
-                                                </li>
-                                                <li>Clear AIr Meadows and Meditative Falls</li>
-                                            </ul>
-                                        </li>
-                                        <li class="list-group-item" itemscope itemtype="http://schema.org/Event">
-                                            <h4>Saturday March 7, 2015</h4>
-                                            <ul>
-                                                <li>
-                                                    Bowen Island Ferry Terminal
-                                                </li>
-                                                <li>
-                                                    Village at Snug Cove for Yoga
-                                                </li>
-                                                <li>
-                                                    Shuttle to destination
-                                                </li>
-                                                <li>
-                                                    Lake and Roots - Revitalize and Renew!
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="list-group-item" itemscope itemtype="http://schema.org/Event">
-                                            <h4>Saturday April 4, 2015</h4>
-                                            <ul>
-                                                <li>
-                                                    UBC Endowments Lands
-                                                </li>
-                                                <li>
-                                                    Meet at University Village (at CIBC, Blenz Coffee, MacDonald)
-                                                </li>
-                                                <li>
-                                                    Wood Air Bathing on UBC Wooden Trail for Deep Contemplation and Renewal.
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="list-group-item" itemscope itemtype="http://schema.org/Event">
-                                            <h4>Saturday May 2, 2015</h4>
-                                            <ul>
-                                                <li>Bowen Island Ferry Terminal</li>
-                                                <li>Village at Snug Cove for Yoga</li>
-                                                <li>Shuttle to destination</li>
-                                                <li>Woods, greens, and waterfalls - Woodair bathe and renew in body and mind</li>
-                                            </ul>
-                                        </li>
-                                        <li class="list-group-item" itemscope itemtype="http://schema.org/Event">
-                                            <h4>Saturday June 06, 2015</h4>
-                                            <ul>
-                                                <li>Salmon Stream at Spanish Banks</li>
-                                                <li>Spanish Banks - A Shoreline Cleanse</li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <section>
-                        <h2 id="retreats">Retreats</h2>
-                        <div class="row">
-                            <div class="col-md-6 col-md-push-6">
-                                <img alt="A painting of trees in the wind on the beach." class="img-responsive img-rounded img-thumbnail" src="images/island-reverie-xs.jpg" />
-                            </div>
-                            <div class="col-md-6 col-md-pull-6">
-                                <ul class="list-group">
-                                    <li class="list-group-item" itemscope itemtype="http://schema.org/Event">
-                                        <h4 itemprop="name">Body Prayer Retreat</h4>
-                                        <div itemprop="location" itemscope itemtype="http://schema.org/Place">
-                                            <a itemprop="url" href="www.stphilipvictoria.ca">
-                                                St Philip Anglican Church
-                                            </a>
-                                            <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                                                <span itemprop="streetAddress">2928 Eastdowne Road</span><br />
-                                                <span itemprop="addressLocality">Victoria</span>, <span itemprop="addressRegion">BC</span><br />
-                                                <span itemprop="addressCountry">Canada</span><br />
-                                            </address>
-                                        </div>
-                                        <ul class="list-unstyled">
-                                            <li itemprop="startDate" content="2014-09-20">Saturday, September 20, 2014, 4-6PM</li>
-                                            <li itemprop="startDate" content="2014-10-18">Saturday, October 18, 2014, 4-6PM</li>
-                                        </ul>
-                                        <p itemprop="offers">To Register Contact: office@stphilipvictoria.ca or call Gillian Fosdick at 250-592-6823</p>
-                                        <p itemprop="description">Body Prayer is a retreat for people who are seeking to deepen the contemplative dimension of their spiritual life through the practice of yoga and meditation. Gentle yoga stretching, yoga poses and breathing exercises are introduced as a path for relaxation, rejuvenation and stress reduction.</p>
-                                    </li>
-                                    <li class="list-group-item" itemscope itemtype="http://schema.org/Event">
-                                        <h4>
-                                            <span itemprop="name">Yoga In-Fusion &trade;</span>
-                                        </h4>
-                                        <p itemprop="location">Salt Spring Island, BC</p>
-                                        <p itemprop="startDate" content="2014-08-22">August 22-24, 2014</p>
-                                        <p itemprop="offers">$115 ($50 deposit to reserve)</p>
-                                        <p itemprop="offers">Contact Ingrid to book.</p>
-                                        <p itemprop="description">Music by Willy Miles-Grenzberg. Yoga instruction by Ingrid Hauss.</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </section>
-                    <section>
-                        <h2 id="yoga-tales">
-                            Yoga Tales<sup>&trade;</sup>
-                        </h2>
-                        <div class="row">
-                            <div class="col-md-6 col-md-push-6">
-                                <a href="~/documents/yoga-tales.pdf">
-                                    <img alt="A collection of toy animals on the cut stump of a tree." class="img-responsive img-rounded img-thumbnail" src="~/images/yoga-tales-xs.jpg" />
-                                </a>
-                            </div>
-                            <div class="col-md-6 col-md-pull-6">
-                                <div class="panel panel-info">
-                                    <div class="panel-heading">
-                                        Yoga for ages 7 - 11
-                                    </div>
-                                    <ul class="list-group">
-                                        <li class="list-group-item">
-                                            <p>Tuesdays 3:30 - 4:30 PM, 2015</p>
-                                            <ul>
-                                                <li>February 17</li>
-                                                <li>March 17</li>
-                                                <li>April 21</li>
-                                                <li>May 19</li>
-                                                <li>June 03</li>
-                                            </ul>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <p>Rates and Registration</p>
-                                            <ul>
-                                                <li>$25 Drop In Fee</li>
-                                                <li>$75 For Five Classes</li>
-                                            </ul>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <ul>
-                                                <li>At Ganges Yoga Studio with Ingrid Hauss</li>
-                                                <li>
-                                                    Preregistration with payment at Ganges Yoga Studio 250-537-4658
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-10 col-md-push-1">
-                                <p>
-                                    We have stories to tell of how to...
-                                    <ul class="list-inline list-yoga-tales">
-                                        <li class="label label-primary">concentrate</li>
-                                        <li class="label label-info">crawl</li>
-                                        <li class="label label-warning">breathe slower</li>
-                                        <li class="label label-info">rise after falling</li>
-                                        <li class="label label-success">be courageous</li>
-                                        <li class="label label-warning">face challenges</li>
-                                        <li class="label label-success">be tall like mountains</li>
-                                        <li class="label label-danger">and free as an eagle</li>
-                                    </ul>
-                            </div>
-                        </div>
-                    </section>
+                    @RenderPage("_SectionYogathedral.cshtml", Config)
+                    @RenderPage("_SectionRetreats.cshtml", Config)
+                    @RenderPage("_SectionYogaTales.cshtml", Config)
                 </section>
-                <section>
-                    <div class="page-header">
-                        <h1 id="about">About</h1>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <p>
-                                <img class="img-responsive img-thumbnail" src="/images/about-me-log-10x10-xs.jpg" alt="This is a placeholder image.">
-                            </p>
-                            <p>
-                                <b class="lead">Ingrid Hauss</b> is a gifted movement teacher, artist and writer. As the founder and owner of <b>Art & Renewal for Body and Mind</b> she teaches in her private practice, works at several studios, and teaches corporate, academic and international retreats and conferences. Recently, she was honored with a writer's stipend through the <b>Collegeville Institute for Ecumenical and Cultural Research</b> supporting her current writing/art project. She continues to lead integrative art installations in the United States, Europe and Canada. Born and raised in the Black Forest of Germany, she now resides in Vancouver, Canada.
-                            </p>
-                            <p>
-                                Extensively trained at <b>Kripalu Center for Yoga and Health</b>, she is certified with the <b>International Yoga Teacher Alliance</b>. She has continued to nurture her passion for the integration of movement, art and spirituality through advanced studies in various styles of yoga, dance and art with master teachers in the USA and Canada.
-                            </p>
-                            <p>
-                                As a certified pilates-yoga instructor, she offers courses in body rolling facilitating renewal in body and mind through the release of the deeper tissues and release of energy blocks. She has specialized in methods of stress reduction to help calm and revitalize the nervous system. Over the past twenty years, her teaching has become infused with her artistic and poetic expression. As such her practice is enriched by her life-long formation and study in contemplative spirituality.
-                            <p>
-                                Rooted in Judeo-Christian writings of the early mystics, ancient desert spirituality and interdisciplinary approaches to mysticism in art and poetry, Ingrid's classes invite the participant into a unique experience of healing and body/mind renewal. Her most recent inspiration in teaching has been to create Yogathedral<sup>&trade;</sup> - a moving meditation practice conducted in sacred, natural spaces.
-                            </p>
-                            <figure class="figure-info">
-                                <img src="~/images/sdiworld.png" alt="Emergin Wisdom: San Diego, California, USA. 7-10 April 2016. Spiritual Directors International." />
-                                <figcaption>
-                                    <p>Ingrid is excited to present her Interactive Art Installation titled <cite>Body, Art and Sacred Poetry: A Contemplative Movement Experience</cite> at <b>Spiritual Directors International Conference</b> <cite>Emerging Wisdom 2016</cite> this upcoming spring!</p>
-                                    <a href="http://www.sdiworld.org/educational-event/2016-emerging-wisdom-educational-events">Spiritual Directors International ~ Emerging Wisdom</a>
-                                </figcaption>
-                            </figure>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="panel panel-info">
-                                <div class="panel-heading">
-                                    <h3 class="panel-title">Clients</h3>
-                                </div>
-                                <div class="panel-body">
-                                    A partial list of the business and organizations that have benefitted from Ingrid's teaching practice include:
-                                </div>
-                                <ul class="list-group list-group-compress-vertical list-group-striped">
-                                    <li class="list-group-item">Curtis Personalized Health, Lulu Lemon Head Offices, Vancouver</li>
-                                    <li class="list-group-item">St Philip Anglican Church, Victoria</li>
-                                    <li class="list-group-item">Verathon Medical, Burnaby</li>
-                                    <li class="list-group-item">Fit in 30, Vancouver</li>
-                                    <li class="list-group-item">Mennonite Association, Canada</li>
-                                    <li class="list-group-item">University of British Columbia Center for Disease Control</li>
-                                    <li class="list-group-item">Cancer Center, Vancouver</li>
-                                    <li class="list-group-item">Association of Adoptive Parents of Children with Fetal Alcohol Syndrome, Vancouver</li>
-                                    <li class="list-group-item">Emory University, Candler School of Theology, Atlanta</li>
-                                    <li class="list-group-item">San Francisco Theological Seminary, USA</li>
-                                    <li class="list-group-item">Episcopal Church, USA</li>
-                                    <li class="list-group-item">York House School, Vancouver</li>
-                                    <li class="list-group-item">Fraser Academy, Vancouver</li>
-                                    <li class="list-group-item">Point Grey Academy, Vancouver</li>
-                                    <li class="list-group-item">Basel Lodge &amp; Ateliers, Switzerland</li>
-                                    <li class="list-group-item">Ben Franklin Academy, Atlanta GA</li>
-                                    <li class="list-group-item">Collegeville Institute for Ecumenical &amp; Cultural Research, Minnesota, USA</li>
-                                    <li class="list-group-item">Sitka Physiotherapy and Wellness, Fairmont Hotel Vancouver</li>
-                                    <li class="list-group-item">Youth Hostels Association, Vancouver</li>
-                                    <li class="list-group-item">Pacific Jubilee Training Program for Spiritual Directors, Canada</li>
-                                    <li class="list-group-item">Sonoma State University, Psychology Department, California</li>
-                                    <li class="list-group-item">St. Andrew's United, North Vancouver</li>
-                                    <li class="list-group-item">Salt Spring Center of Yoga</li>
-                                    <li class="list-group-item">North End Fitness, Ganges, Salt Spring Island</li>
-                                    <li class="list-group-item">University of British Columbia, Medical Alumni Association</li>
-                                    <li class="list-group-item">Open Hand Studios for Yoga &amp; the Arts, Sebastopol, California</li>
-                                    <li class="list-group-item">Stress Management Center of Marin County, Larkspur, CA</li>
-                                    <li class="list-group-item">Semperviva Yoga, and Open Door Yoga Studios, Vancouver, BC</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section>
-                    <div class="page-header">
-                        <h1 id="art">Art</h1>
-                    </div>
-                    @{
-                        <div class="img-gallery">
-                            <div class="row">
-                                @foreach (var fileInfo in ImageGallery.GetGalleryImages())
-                                {
-                                    // the file name pattern must be <title string> <dimension string> cm [SOLD]
-                                    var imgSrc = ImageGallery.ImgSrc(fileInfo.FullName);
-                                    var imgTitle = ImageGallery.ImgTitle(fileInfo);
-                                    var imgDimensions = ImageGallery.ImgDimesions(fileInfo);
-                                    var isSold = ImageGallery.IsSold(fileInfo);
-                                    var imgSrcWatermarked = ImageGallery.AddWatermarkToImage(fileInfo);
-                                    <div class="col-sm-6 col-md-4">
-                                        <figure class="@(isSold ? "sold" : string.Empty)">
-                                            <a href="@imgSrcWatermarked">
-                                                <img class="img-responsive" src="@imgSrcWatermarked" />
-                                            </a>
-                                            <figcaption>
-                                                <ul class="list-unstyled">
-                                                    <li>@imgTitle</li>
-                                                    <li>@imgDimensions</li>
-                                                </ul>
-                                            </figcaption>
-                                        </figure>
-                                    </div>
-                                }
-                            </div>
-                        </div>
-                    }
-                </section>
+                @RenderPage("_SectionAbout.cshtml", Config)
+                @RenderPage("_SectionArt.cshtml", Config)
             </div>
         </div>
-        <footer class="footer">
-            <div class="pull-right">
-                <span>&copy; Copyright 2014 @Config.FirstName @Config.LastName</span> |
-                <a href="mailto:@Config.Email">@Config.Email</a> |
-                <span>Website by </span><a href="http://www.bigfont.ca">BigFont</a>
-            </div>
-        </footer>
+        @RenderPage("_Footer.cshtml", Config)
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="Scripts/bootstrap.min.js"></script>
-    @*IE 10*@
-    <script type="text/javascript">
-        if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
-            var msViewportStyle = document.createElement('style')
-            msViewportStyle.appendChild(
-              document.createTextNode(
-                '@@-ms-viewport{width:auto!important}'
-              )
-            )
-            document.querySelector('head').appendChild(msViewportStyle)
-        }
-    </script>
+    @RenderPage("_Scripts.cshtml", Config)
 </body>
 </html>

@@ -1,0 +1,14 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="Scripts/bootstrap.min.js"></script>
+@*IE 10*@
+<script type="text/javascript">
+        if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+            var msViewportStyle = document.createElement('style')
+            msViewportStyle.appendChild(
+              document.createTextNode(
+                '@@-ms-viewport{width:auto!important}'
+              )
+            )
+            document.querySelector('head').appendChild(msViewportStyle)
+        }
+</script>
