@@ -113,7 +113,7 @@
     <Content Include="config\imageprocessor\cache.config" />
     <Content Include="config\imageprocessor\processing.config" />
     <Content Include="config\imageprocessor\security.config" />
-    <Content Include="documents\yogathedral.pdf" />
+    <Content Include="documents\*.pdf" />
     <Content Include="Content\page.less" />
     <Content Include="Content\page.css.map">
       <DependentUpon>page.css</DependentUpon>
