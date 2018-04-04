@@ -126,7 +126,6 @@
     </None>
     <Content Include="_SiteNav.cshtml" />
     <Content Include="_SectionBookings.cshtml" />
-    <Content Include="_SectionClasses.cshtml" />
     <Content Include="_SectionYogathedral.cshtml" />
     <Content Include="_SectionRetreats.cshtml" />
     <Content Include="_SectionYogaTales.cshtml" />
