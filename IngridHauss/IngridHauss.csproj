@@ -101,9 +101,7 @@
     <Content Include="config\imageprocessor\processing.config" />
     <Content Include="config\imageprocessor\security.config" />
     <Content Include="documents\*.pdf" />
-    <Content Include="Content\page.css">
-      <DependentUpon>page.css</DependentUpon>
-    </Content>
+    <Content Include="Content\page.css"></Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
