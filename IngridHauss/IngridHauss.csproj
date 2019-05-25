@@ -87,7 +87,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\page.less"/>
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -102,8 +101,7 @@
     <Content Include="config\imageprocessor\processing.config" />
     <Content Include="config\imageprocessor\security.config" />
     <Content Include="documents\*.pdf" />
-    <Content Include="Content\page.less" />
-    <Content Include="Content\page.css.map">
+    <Content Include="Content\page.css">
       <DependentUpon>page.css</DependentUpon>
     </Content>
     <None Include="Web.Debug.config">

@@ -1,0 +1,9 @@
+{
+  "name": "ingridhauss",
+  "scripts": {
+    "build": "lessc ./Content/page.less ./Content/page.css"
+  },
+  "devDependencies": {
+    "less": "^3.9.0"
+  }
+}
