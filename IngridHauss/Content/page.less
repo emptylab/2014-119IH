@@ -1,173 +1,168 @@
-﻿@import 'bootstrap.min.css';
+﻿@import "bootstrap.min.css";
 
 body {
-    position: relative;
-    padding-top: 20px;
+  position: relative;
+  padding-top: 20px;
 
-    .container {
-        > header {
-            img {
-                display: inline;
-            }
+  .container {
+    > header {
+      img {
+        display: inline;
+      }
 
-            h1 {
-                padding-top: 20px;
-                font-size: 50px;
-            }
+      h1 {
+        padding-top: 20px;
+        font-size: 50px;
+      }
 
-            .container > header h2 {
-                padding-bottom: 20px;
-                border-bottom: 1px solid silver;
-            }
-        }
-
-        > footer {
-            padding-top: 100px;
-            padding-bottom: 50px;
-        }
+      .container > header h2 {
+        padding-bottom: 20px;
+        border-bottom: 1px solid silver;
+      }
     }
+
+    > footer {
+      padding-top: 100px;
+      padding-bottom: 50px;
+    }
+  }
 }
 
 .panel {
-    ul {
-        margin-bottom: 0;
+  ul {
+    margin-bottom: 0;
+  }
+
+  img {
+    margin-top: 10px; // match h4 heading margin
+  }
+
+  &.panel-large {
+    .panel-heading {
+      font-size: 1.5em;
     }
 
-    img {
-        margin-top: 10px; // match h4 heading margin
+    .panel-large .panel-body {
+      font-size: 1.2em;
     }
-
-    &.panel-large {
-        .panel-heading {
-            font-size: 1.5em;
-        }
-
-        .panel-large .panel-body {
-            font-size: 1.2em;
-        }
-    }
+  }
 }
 
 ul.list-group ul {
-    // decrease nested ul padding
-    padding-left: 20px;
-    margin-bottom: 10px;
-}
-
-ul.list-yoga-tales {
-    font-size: 20px;
+  // decrease nested ul padding
+  padding-left: 20px;
+  margin-bottom: 10px;
 }
 
 ul.list-group-compress-vertical li {
-    padding-top: 5px;
-    padding-bottom: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 ul.list-group-striped li:nth-child(odd) {
-    background-color: #D9EDF7;
+  background-color: #d9edf7;
 }
 
 [class|="col"] {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 cite {
-    font-style: italic;
+  font-style: italic;
 }
 
 figure.figure-info {
-    padding: 5PX;
-    background-color: #ebf5fa;
+  padding: 5px;
+  background-color: #ebf5fa;
 
-    img {
-        display: block;
-        margin-bottom: 5px;
-        width: 100%;
-    }
+  img {
+    display: block;
+    margin-bottom: 5px;
+    width: 100%;
+  }
 }
 
 div.img-gallery {
+  @caption-height: 40px;
+  @img-height: 140px;
+  @margin-small: 7px;
 
-    @caption-height: 40px;
-    @img-height: 140px;
-    @margin-small: 7px;
+  figure {
+    margin-bottom: 40px;
+    position: relative;
+    max-width: 100%;
 
-    figure {
-        margin-bottom: 40px;
-        position: relative;
-        max-width: 100%;
-
-        &.sold {
-
-            &::after {
-                bottom: @caption-height;
-                content: 'Sold';
-                margin-bottom: @margin-small;
-                margin-left: @margin-small;
-                position: absolute;
-                left: 0;
-            }
-        }
-
-        img {
-            height: @img-height;
-        }
-
-        figcaption {
-            height: @caption-height;
-        }
+    &.sold {
+      &::after {
+        bottom: @caption-height;
+        content: "Sold";
+        margin-bottom: @margin-small;
+        margin-left: @margin-small;
+        position: absolute;
+        left: 0;
+      }
     }
+
+    img {
+      height: @img-height;
+    }
+
+    figcaption {
+      height: @caption-height;
+    }
+  }
 }
 
 #site-nav {
+  ul ul {
+    margin-top: 2.5px;
 
-    ul ul {
-        margin-top: 2.5px;
+    > li {
+      // handle nested navs
+      margin-left: 25px;
 
-        > li {
-            // handle nested navs
-            margin-left: 25px;
-
-            &.active {
-                a {
-                    color: darken(#428BCA, 40%);
-                    background-color: lighten(#428BCA, 32%);
-                }
-            }
-        }
-    }
-
-    li.contact {
+      &.active {
         a {
-            color: black;
+          color: darken(#428bca, 40%);
+          background-color: lighten(#428bca, 32%);
         }
+      }
     }
+  }
 
-    .affix-top,
-    .affix,
-    .affix-bottom {
-        padding-top: 20px;
-        display: table;
+  li.contact {
+    a {
+      color: black;
     }
+  }
 
-    .affix {
-        top: 0;
-    }
+  .affix-top,
+  .affix,
+  .affix-bottom {
+    padding-top: 20px;
+    display: table;
+  }
+
+  .affix {
+    top: 0;
+  }
 }
 
-h1, h2 {
-    &[id] {
-        // this is for intra site navigation alignment
-        padding-top: 20px;
-    }
+h1,
+h2 {
+  &[id] {
+    // this is for intra site navigation alignment
+    padding-top: 20px;
+  }
 }
 /*col-md collapse width*/
-@media(max-width:992px) {
-
-    #site-nav {
-        .affix, .affix-top, .affix-bottom {
-            position: static;
-            display: none;
-        }
+@media (max-width: 992px) {
+  #site-nav {
+    .affix,
+    .affix-top,
+    .affix-bottom {
+      position: static;
+      display: none;
     }
+  }
 }

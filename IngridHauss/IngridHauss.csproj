@@ -92,14 +92,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="images\sdiworld.png" />
-    <Content Include="images\yoga-tales-orig.jpg" />
-    <Content Include="images\yoga-tales-xs.jpg" />
-    <Content Include="images\yogathedral-fall-2015-orig.jpg" />
-    <Content Include="images\yogathedral-fall-2015-xs.jpg" />
-    <Content Include="images\yogathedral-orig.jpg" />
-    <Content Include="images\yogathedral-vista.jpg" />
-    <Content Include="images\yogathedral-warrior.jpg" />
-    <Content Include="images\yogathedral-xs.jpg" />
     <Content Include="Scripts\bootstrap.min.js.map" />
     <Content Include="Scripts\holder.min.js.map" />
     <Content Include="index.cshtml" />
@@ -122,9 +114,7 @@
     </None>
     <Content Include="_SiteNav.cshtml" />
     <Content Include="_SectionBookings.cshtml" />
-    <Content Include="_SectionYogathedral.cshtml" />
     <Content Include="_SectionRetreats.cshtml" />
-    <Content Include="_SectionYogaTales.cshtml" />
     <Content Include="_SectionAbout.cshtml" />
     <Content Include="_SectionArt.cshtml" />
     <Content Include="_Footer.cshtml" />
@@ -136,20 +126,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="images\about-me-10x10-orig.jpg" />
-    <Content Include="images\about-me-10x10-xs.jpg" />
-    <Content Include="images\about-me-log-10x10-orig.jpg" />
-    <Content Include="images\about-me-log-10x10-xs.jpg" />
-    <Content Include="images\about-me-nature-orig.jpg" />
-    <Content Include="images\energetic-warrior-orig.jpg" />
-    <Content Include="images\energetic-warrior-xs.jpg" />
-    <Content Include="images\island-reverie-orig.jpg" />
-    <Content Include="images\island-reverie-xs.jpg" />
-    <Content Include="images\meditation-orig.jpg" />
-    <Content Include="images\meditation-xs.jpg" />
-    <Content Include="images\Stripper.exe" />
-    <Content Include="images\urban-yoga-orig.jpg" />
-    <Content Include="images\urban-yoga-xs.jpg" />
+    <Content Include="images\*.jpg" />
     <Content Include="robots.txt" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
