@@ -111,6 +111,7 @@
     <Content Include="_SiteNav.cshtml" />
     <Content Include="_SectionBookings.cshtml" />
     <Content Include="_SectionRetreats.cshtml" />
+    <Content Include="_SectionNews.cshtml" />
     <Content Include="_SectionAbout.cshtml" />
     <Content Include="_SectionArt.cshtml" />
     <Content Include="_Footer.cshtml" />
